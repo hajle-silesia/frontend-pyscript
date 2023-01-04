@@ -5,6 +5,7 @@ button_off = "./img/button_off.png"
 button_on = "./img/button_on.png"
 document.querySelector("img.brewery_bg").setAttribute("src", brewery_bg)
 document.querySelector("img.pump_1").setAttribute("src", button_off)
+document.querySelector("img.pump_1").hidden = True
 document.querySelector("img.pump_2").setAttribute("src", button_off)
 document.querySelector("img.pump_3").setAttribute("src", button_off)
 document.querySelector("img.bk_drain").setAttribute("src", button_off)
