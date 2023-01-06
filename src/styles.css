@@ -3,196 +3,110 @@ position: relative;
 top: 0;
 left: 0;
 }
-.brewery_bg {
+.background {
 position: relative;
 background-size: 100% auto;
 width:100%;
 top: 0;
 left: 0;
 }
-.pump_1 {
+.canvas_item {
 position: absolute;
 width: 1.5%;
 height: auto;
+transform: translate(-50%, -50%);
+}
+#pump_1 {
 top: 84.1152263%;
 left: 20.0%;
-transform: translate(-50%, -50%);
 }
-.pump_2 {
-position: absolute;
-width: 1.5%;
-height: auto;
+#pump_2 {
 top: 73.3333333%;
 left: 50.555555600000005%;
-transform: translate(-50%, -50%);
 }
-.pump_3 {
-position: absolute;
-width: 1.5%;
-height: auto;
+#pump_3 {
 top: 73.3333333%;
 left: 81.8055556%;
-transform: translate(-50%, -50%);
 }
-.bk_drain {
-position: absolute;
-width: 1.5%;
-height: auto;
+#bk_drain {
 top: 51.4403292%;
 left: 24.6296296%;
-transform: translate(-50%, -50%);
 }
-.bk_wort {
-position: absolute;
-width: 1.5%;
-height: auto;
+#bk_wort {
 top: 52.098765400000005%;
 left: 19.2592593%;
-transform: translate(-50%, -50%);
 }
-.bk_whirlpool {
-position: absolute;
-width: 1.5%;
-height: auto;
+#bk_whirlpool {
 top: 42.3868313%;
 left: 24.6296296%;
-transform: translate(-50%, -50%);
 }
-.pump_1_cfc {
-position: absolute;
-width: 1.5%;
-height: auto;
+#pump_1_cfc {
 top: 75.3909465%;
 left: 30.8796296%;
-transform: translate(-50%, -50%);
 }
-.pump_1_wort_out {
-position: absolute;
-width: 1.5%;
-height: auto;
+#pump_1_wort_out {
 top: 74.32098769999999%;
 left: 27.037037%;
-transform: translate(-50%, -50%);
 }
-.pump_1_drain {
-position: absolute;
-width: 1.5%;
-height: auto;
+#pump_1_drain {
 top: 76.46090530000001%;
 left: 27.037037%;
-transform: translate(-50%, -50%);
 }
-.cfc_drain {
-position: absolute;
-width: 1.5%;
-height: auto;
+#cfc_drain {
 top: 77.53086420000001%;
 left: 32.9166667%;
-transform: translate(-50%, -50%);
 }
-.water_in_cfc {
-position: absolute;
-width: 1.5%;
-height: auto;
+#water_in_cfc {
 top: 52.263374500000005%;
 left: 34.537037%;
-transform: translate(-50%, -50%);
 }
-.pump_2_pump_1 {
-position: absolute;
-width: 1.5%;
-height: auto;
+#pump_2_pump_1 {
 top: 67.2427984%;
 left: 46.527777799999996%;
-transform: translate(-50%, -50%);
 }
-.pump_2_rims {
-position: absolute;
-width: 1.5%;
-height: auto;
+#pump_2_rims {
 top: 67.2427984%;
 left: 55.5555556%;
-transform: translate(-50%, -50%);
 }
-.mlt_recirculation {
-position: absolute;
-width: 1.5%;
-height: auto;
+#mlt_recirculation {
 top: 16.0493827%;
 left: 50.555555600000005%;
-transform: translate(-50%, -50%);
 }
-.water_in_pump_3 {
-position: absolute;
-width: 1.5%;
-height: auto;
+#water_in_pump_3 {
 top: 67.2427984%;
 left: 73.3796296%;
-transform: translate(-50%, -50%);
 }
-.pump_3_hlt {
-position: absolute;
-width: 1.5%;
-height: auto;
+#pump_3_hlt {
 top: 67.2427984%;
 left: 72.17592590000001%;
-transform: translate(-50%, -50%);
 }
-.pump_3_rims {
-position: absolute;
-width: 1.5%;
-height: auto;
+#pump_3_rims {
 top: 67.2427984%;
 left: 73.3796296%;
-transform: translate(-50%, -50%);
 }
-.hlt_drain {
-position: absolute;
-width: 1.5%;
-height: auto;
+#hlt_drain {
 top: 49.3004115%;
 left: 78.47222219999999%;
-transform: translate(-50%, -50%);
 }
-.bk_cip {
-position: absolute;
-width: 1.5%;
-height: auto;
+#bk_cip {
 top: 2.5514403000000003%;
 left: 24.6296296%;
-transform: translate(-50%, -50%);
 }
-.mlt_cip {
-position: absolute;
-width: 1.5%;
-height: auto;
+#mlt_cip {
 top: 2.5514403000000003%;
 left: 50.555555600000005%;
-transform: translate(-50%, -50%);
 }
-.mlt_sightglass {
-position: absolute;
-width: 1.5%;
-height: auto;
+#mlt_sightglass {
 top: 27.325102899999997%;
 left: 47.0833333%;
-transform: translate(-50%, -50%);
 }
-.mlt_sightglass_cam {
-position: absolute;
-width: 1.5%;
-height: auto;
+#mlt_sightglass_cam {
 top: 27.325102899999997%;
 left: 50.555555600000005%;
-transform: translate(-50%, -50%);
 }
-.mlt_sightglass_size {
-position: absolute;
-width: 1.5%;
-height: auto;
+#mlt_sightglass_size {
 top: 33.6625514%;
 left: 48.2407407%;
-transform: translate(-50%, -50%);
 }
 
 .menu {
