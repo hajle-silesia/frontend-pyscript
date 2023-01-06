@@ -1,7 +1,14 @@
-from js import document
+from js import document, console
 
 
-def show(*ags, **kwargs):
+def show(*args, **kwargs):
+    console.log(f"len args: {len(args)}")
+    console.log(f"type: {args[0].type}")
+    console.log(f"target: {args[0].target}")
+    console.log(f"target.id: {args[0].target.id}")
+    console.log(f"target.src: {args[0].target.src}")
+    console.log(f"type(target.id): {type(args[0].target.id)}")
+
     document.getElementById("pump_1").setAttribute("src", button_on)
     document.getElementById("pump_2").hidden = True
 
