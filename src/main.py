@@ -1,5 +1,9 @@
 from js import document
 
+def show(*ags, **kwargs):
+    document.querySelector("img.pump_2").hidden = True
+
+
 brewery_bg = "./img/brewery_bg.png"
 button_off = "./img/button_off.png"
 button_on = "./img/button_on.png"
