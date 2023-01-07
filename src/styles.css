@@ -4,7 +4,8 @@ background-color: #f0f0f0;
 .canvas {
 position: relative;
 top: 0;
-left: 0;
+left: 5%;
+width: 95%;
 }
 .background {
 position: relative;
@@ -20,6 +21,8 @@ height: auto;
 transform: translate(-50%, -50%);
 }
 table, th, td {
+  font-size: 1.2vw;
+  padding: 0.5vw;
   border: 1px solid black;
   border-collapse: collapse;
   table-layout: fixed;
@@ -124,6 +127,7 @@ left: 48.2407407%;
   width: 5%;
   position: absolute;
   top: 0;
+  user-select: none;
   z-index: 1;
 }
 
@@ -209,7 +213,6 @@ left: 48.2407407%;
   color: white;
   font-size: 0.8vw;
   position: absolute;
-  user-select: none;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
