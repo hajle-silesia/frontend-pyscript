@@ -6,4 +6,4 @@ RUN apt update && apt install -y \
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY ./src /usr/share/nginx/html
-RUN python3 /usr/share/nginx/html/generator.py
+# RUN python3 /usr/share/nginx/html/generator.py
