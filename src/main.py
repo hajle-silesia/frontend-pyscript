@@ -1,5 +1,5 @@
 from js import document, console
-from src.api_thread import APIThread
+
 
 def activate_tab(*args, **kwargs):
     console.log(f"target.id: {args[0].target.id}")
@@ -52,5 +52,3 @@ document.getElementById("mlt_sightglass_cam").setAttribute("src", button_off)
 document.getElementById("mlt_sightglass_size").setAttribute("src", button_off)
 
 document.getElementById("recipe").hidden = True
-
-api_thread = APIThread()
