@@ -1,6 +1,16 @@
 from js import document, console
 
 
+def activate_tab(*args, **kwargs):
+    console.log(f"target.id: {args[0].target.id}")
+    if "brewery_tab" in args[0].target.id:
+        document.getElementById("recipe").hidden = True
+        document.getElementById("brewery").hidden = False
+    elif "recipe_tab" in args[0].target.id:
+        document.getElementById("recipe").hidden = False
+        document.getElementById("brewery").hidden = True
+
+
 def show(*args, **kwargs):
     console.log(f"len args: {len(args)}")
     console.log(f"type: {args[0].type}")
@@ -40,3 +50,5 @@ document.getElementById("mlt_cip").setAttribute("src", button_off)
 document.getElementById("mlt_sightglass").setAttribute("src", button_off)
 document.getElementById("mlt_sightglass_cam").setAttribute("src", button_off)
 document.getElementById("mlt_sightglass_size").setAttribute("src", button_off)
+
+document.getElementById("recipe").hidden = True

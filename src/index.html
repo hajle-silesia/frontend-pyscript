@@ -7,7 +7,61 @@
 <link rel="icon" href="./img/icon.png">
 </head>
 <body>
-<div class="canvas">
+<div class="menu">
+<div class="a" id="recipe_tab" pys-onClick="activate_tab">
+    <img class="image" id="recipe_tab1" src="./img/recipe-boo.png">
+        <div class="overlay1" id="recipe_tab2">
+            <div class="text" id="recipe_tab3">Recipe</div>
+        </div>
+</div>
+<div class="b" id="brewery_tab" pys-onClick="activate_tab">
+    <img class="image" id="brewery_tab1" src="./img/ho.png">
+        <div class="overlay2" id="brewery_tab2">
+            <div class="text" id="brewery_tab3">Brewing</div>
+        </div>
+</div>
+<div class="c">
+    <img class="image" src="./img/targe.png">
+        <div class="overlay3">
+            <div class="text">Calibration</div>
+        </div>
+</div>
+<div class="d">
+    <img class="image" src="./img/fermentatio.png">
+        <div class="overlay4">
+            <div class="text">Fermentation</div>
+        </div>
+</div>
+<div class="e">
+    <img class="image" src="./img/char.png">
+        <div class="overlay5">
+            <div class="text">Analysis</div>
+        </div>
+</div>
+</div>
+<div class="canvas" id="recipe">
+<table style="width:100%">
+  <tr>
+    <th>Miscs</th>
+    <th>Fermentables</th>
+    <th>Parameters</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td rowspan="3">Smith</td>
+  </tr>
+  <tr>
+    <th>Mash steps</th>
+    <th>Hops</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+  </tr>
+</table>
+</div>
+<div class="canvas" id="brewery">
 <img class="background" id="brewery_bg" src="src">
 <img class="canvas_item" id="pump_1" src="src">
 <img class="canvas_item" id="pump_2" src="src" pys-onClick="show">
@@ -32,40 +86,6 @@
 <img class="canvas_item" id="mlt_sightglass" src="src">
 <img class="canvas_item" id="mlt_sightglass_cam" src="src">
 <img class="canvas_item" id="mlt_sightglass_size" src="src">
-
-<div class="menu">
-<div class="a">
-    <img class="image" src="./img/recipe-boo.png">
-        <div class="overlay1">
-            <div class="text">Recipe</div>
-        </div>
-</div>
-<div class="b">
-    <img class="image" src="./img/ho.png">
-        <div class="overlay2">
-            <div class="text">Brewing</div>
-        </div>
-</div>
-<div class="c">
-    <img class="image" src="./img/targe.png">
-        <div class="overlay3">
-            <div class="text">Calibration</div>
-        </div>
-</div>
-<div class="d">
-    <img class="image" src="./img/fermentatio.png">
-        <div class="overlay4">
-            <div class="text">Fermentation</div>
-        </div>
-</div>
-<div class="e">
-    <img class="image" src="./img/char.png">
-        <div class="overlay5">
-            <div class="text">Analysis</div>
-        </div>
-</div>
-</div>
-
 </div>
 <py-script src="main.py">
 </py-script>

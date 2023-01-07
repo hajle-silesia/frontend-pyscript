@@ -1,3 +1,6 @@
+body {
+background-color: #f0f0f0;
+}
 .canvas {
 position: relative;
 top: 0;
@@ -15,6 +18,11 @@ position: absolute;
 width: 1.5%;
 height: auto;
 transform: translate(-50%, -50%);
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
 #pump_1 {
@@ -116,6 +124,7 @@ left: 48.2407407%;
   width: 5%;
   position: absolute;
   top: 0;
+  z-index: 1;
 }
 
 .image {
@@ -207,9 +216,4 @@ left: 48.2407407%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-}
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  table-layout: fixed;
 }
