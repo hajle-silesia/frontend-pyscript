@@ -1,4 +1,35 @@
-from js import document, console
+from js import document, console, FileReader
+from pyodide.http import pyfetch
+from pyodide import JsException
+import datetime
+import asyncio
+from pyodide import create_proxy
+import json
+import base64
+
+
+# async def foo():
+#     while True:
+#         await asyncio.sleep(1)
+#         console.log("tu")
+#         output = datetime.datetime.now()
+#         Element("outputDiv2").write(output)
+
+
+def read_complete(event):
+    output = document.getElementById("output")
+    output.innerText = event.target.result
+    asyncio.ensure_future(upload(event.target.result))
+
+
+async def upload_file(*args, **kwargs):
+    file_list = document.getElementById("upload").files
+    for file in file_list:
+        reader = FileReader.new()
+        onload_event = create_proxy(read_complete)
+        reader.onload = onload_event
+        reader.readAsText(file)
+    return
 
 
 def activate_tab(*args, **kwargs):
@@ -21,6 +52,26 @@ def show(*args, **kwargs):
 
     document.getElementById("pump_1").setAttribute("src", button_on)
     document.getElementById("pump_2").hidden = True
+
+
+def on_click(evt):
+    show()
+
+
+async def upload(file):
+    try:
+        response = await pyfetch(url="http://localhost:8083/update",
+                                 method="POST",
+                                 headers={"Content-Type": "application/json"},
+                                 body=base64.b64encode(json.dumps(file, default=str).encode()),
+                                 mode="no-cors",
+                                 )
+        if response.ok:
+            console.log("SENT TO FILE-CONTENT-MONITOR")
+            # data = await response.json()
+            # return data.get("token")
+    except JsException:
+        return None
 
 
 brewery_bg = "./img/brewery_bg.png"
@@ -58,3 +109,6 @@ def main():
 
 
 main()
+
+button = document.getElementById("upload")
+button.addEventListener("change", create_proxy(upload_file))
