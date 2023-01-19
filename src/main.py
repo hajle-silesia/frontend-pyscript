@@ -17,8 +17,6 @@ import base64
 
 
 def read_complete(event):
-    output = document.getElementById("output")
-    output.innerText = event.target.result
     asyncio.ensure_future(upload(event.target.result))
 
 
@@ -32,7 +30,7 @@ async def upload_file(*args, **kwargs):
     return
 
 
-def activate_tab(*args, **kwargs):
+async def activate_tab(*args, **kwargs):
     console.log(f"target.id: {args[0].target.id}")
     if "brewery_tab" in args[0].target.id:
         document.getElementById("recipe").hidden = True
@@ -52,10 +50,6 @@ def show(*args, **kwargs):
 
     document.getElementById("pump_1").setAttribute("src", button_on)
     document.getElementById("pump_2").hidden = True
-
-
-def on_click(evt):
-    show()
 
 
 async def upload(file):
@@ -110,5 +104,9 @@ def main():
 
 main()
 
-button = document.getElementById("upload")
-button.addEventListener("change", create_proxy(upload_file))
+document.getElementById("upload").addEventListener("change", create_proxy(upload_file))
+document.getElementById("recipe_tab_overlay").addEventListener("click", create_proxy(activate_tab))
+document.getElementById("recipe_tab_text").addEventListener("click", create_proxy(activate_tab))
+document.getElementById("brewery_tab_overlay").addEventListener("click", create_proxy(activate_tab))
+document.getElementById("brewery_tab_text").addEventListener("click", create_proxy(activate_tab))
+document.getElementById("pump_2").addEventListener("click", create_proxy(show))

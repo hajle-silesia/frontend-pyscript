@@ -3,29 +3,26 @@ background-color: #f0f0f0;
 }
 .canvas {
 position: relative;
-top: 0;
-left: 5%;
 width: 95%;
+left: 5%;
 }
 .background {
 position: relative;
-background-size: 100% auto;
 width:100%;
-top: 0;
-left: 0;
 }
 .canvas_item {
 position: absolute;
 width: 1.5%;
-height: auto;
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
 transform: translate(-50%, -50%);
 }
 table, th, td {
-  font-size: 1.2vw;
-  padding: 0.5vw;
-  border: 1px solid black;
-  border-collapse: collapse;
-  table-layout: fixed;
+font-size: 1.2vw;
+padding: 0.5vw;
+border: 1px solid black;
+border-collapse: collapse;
+table-layout: fixed;
 }
 
 #pump_1 {
@@ -126,86 +123,29 @@ left: 48.2407407%;
   flex-direction: column;
   width: 5%;
   position: absolute;
-  top: 0;
   user-select: none;
-  z-index: 1;
+}
+
+.menu_item {
+  position: relative;
 }
 
 .image {
   width: 100%;
-  height: auto;
   background-color: rgba(0, 0, 0, 1);
 }
 
-.overlay1 {
+.overlay {
   position: absolute;
-  display: flex;
   top: 0;
   width: 100%;
-  height: 20%;
+  height: 100%;
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
 }
 
-.overlay2 {
-  position: absolute;
-  display: flex;
-  top: 20%;
-  width: 100%;
-  height: 20%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
-
-
-.overlay3 {
-  position: absolute;
-  display: flex;
-  top: 40%;
-  width: 100%;
-  height: 20%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
-
-.overlay4 {
-  position: absolute;
-  display: flex;
-  top: 60%;
-  width: 100%;
-  height: 20%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
-
-.overlay5 {
-  position: absolute;
-  display: flex;
-  top: 80%;
-  width: 100%;
-  height: 20%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
-
-.a:hover .overlay1 {
-  opacity: 1;
-}
-.b:hover .overlay2 {
-  opacity: 1;
-}
-.c:hover .overlay3 {
-  opacity: 1;
-}
-.d:hover .overlay4 {
-  opacity: 1;
-}
-.e:hover .overlay5 {
+.menu_item:hover .overlay {
   opacity: 1;
 }
 
