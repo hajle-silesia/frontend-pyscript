@@ -1,19 +1,11 @@
-from js import document, console, FileReader
-from pyodide.http import pyfetch
-from pyodide import JsException
-import datetime
 import asyncio
-from pyodide import create_proxy
-import json
 import base64
+import json
 
-
-# async def foo():
-#     while True:
-#         await asyncio.sleep(1)
-#         console.log("tu")
-#         output = datetime.datetime.now()
-#         Element("outputDiv2").write(output)
+from js import document, window, console, FileReader
+from pyodide import JsException
+from pyodide import create_proxy
+from pyodide.http import pyfetch
 
 
 def read_complete(event):
@@ -22,16 +14,21 @@ def read_complete(event):
 
 async def upload_file(*args, **kwargs):
     file_list = document.getElementById("upload").files
+    console.log(f"HREF: {window.location.href}")
+    console.log(f"hostname : {window.location.hostname}")
+    console.log(f"pathname : {window.location.pathname}")
+    console.log(f"protocol : {window.location.protocol}")
+
     for file in file_list:
         reader = FileReader.new()
         onload_event = create_proxy(read_complete)
         reader.onload = onload_event
         reader.readAsText(file)
+    document.getElementById('upload').value = ""
     return
 
 
 async def activate_tab(*args, **kwargs):
-    console.log(f"target.id: {args[0].target.id}")
     if "brewery_tab" in args[0].target.id:
         document.getElementById("recipe").hidden = True
         document.getElementById("brewery").hidden = False
@@ -54,11 +51,12 @@ def show(*args, **kwargs):
 
 async def upload(file):
     try:
-        response = await pyfetch(url="http://localhost:8083/update",
+        console.log(f"PUSHING HERE: {window.location.href}api/update")
+        response = await pyfetch(url=f"{window.location.href}api/update",
                                  method="POST",
-                                 headers={"Content-Type": "application/json"},
+                                 # headers={'content-type': "application/json"},
                                  body=base64.b64encode(json.dumps(file, default=str).encode()),
-                                 mode="no-cors",
+                                 # mode="no-cors",
                                  )
         if response.ok:
             console.log("SENT TO FILE-CONTENT-MONITOR")
