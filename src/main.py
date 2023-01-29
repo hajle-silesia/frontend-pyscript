@@ -102,7 +102,7 @@ def main():
 
 main()
 
-document.getElementById("upload").addEventListener("change", create_proxy(upload_file))
+document.getElementById("label_recipe_upload").addEventListener("change", create_proxy(upload_file))
 document.getElementById("recipe_tab_overlay").addEventListener("click", create_proxy(activate_tab))
 document.getElementById("recipe_tab_text").addEventListener("click", create_proxy(activate_tab))
 document.getElementById("brewery_tab_overlay").addEventListener("click", create_proxy(activate_tab))

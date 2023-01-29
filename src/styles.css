@@ -1,5 +1,6 @@
 body {
 background-color: #f0f0f0;
+font-size: 1.2vw;
 }
 .canvas {
 position: relative;
@@ -17,14 +18,27 @@ width: 1.5%;
 -ms-transform: translate(-50%, -50%);
 transform: translate(-50%, -50%);
 }
+#label_recipe_upload {
+display: inline-block;
+background-color: #008CBA;
+color: white;
+padding: 0.5vw;
+}
 table, th, td {
-font-size: 1.2vw;
 padding: 0.5vw;
 border: 1px solid black;
 border-collapse: collapse;
+}
+.outer {
 table-layout: fixed;
 }
-
+.outer .inner {
+table-layout: auto;
+border-style: none;
+}
+.outer .inner td {
+border-style: none;
+}
 #pump_1 {
 top: 84.1152263%;
 left: 20.0%;

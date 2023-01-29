@@ -41,17 +41,25 @@
 </div>
 <div class="canvas" id="recipe">
 <div>
-    <label for="upload">Recipe:</label>
-    <input type="file" id="upload">
+    <input type="file" id="recipe_upload" class="hidden">
+    <label id="label_recipe_upload" for="recipe_upload">Upload recipe &#129045;</label>
 </div>
-<table style="width:100%">
+<table style="width:100%" class="outer">
   <tr>
     <th>Miscs</th>
     <th>Fermentables</th>
     <th>Parameters</th>
   </tr>
   <tr>
-    <td>Jill</td>
+    <td>
+        <table class="inner" style="width:100%">
+            <tr>
+                <td>Really long name check</td>
+                <td>Amount</td>
+                <td>Additional</td>
+            </tr>
+        </table>
+    </td>
     <td>Smith</td>
     <td rowspan="3">Smith</td>
   </tr>
