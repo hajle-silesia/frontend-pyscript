@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:stable
 RUN apt update && apt install -y \
     curl \
     python3 \
